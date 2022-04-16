@@ -2685,7 +2685,7 @@ namespace Grunt.Core
 
         public async Task<PlayerSkillResultValue> SkillGetMatchPlayerResult(string matchId, string playerId)
         {
-            var response = await ExecuteAPIRequest($"https://skill.svc.halowaypoint.com:443/hi/matches/{matchId}/skill?players={playerId}",
+            var response = await ExecuteAPIRequest($"https://skill.svc.halowaypoint.com:443/hi/matches/{matchId}/skill?players=xuid({playerId})",
                                    HttpMethod.Get,
                                    true,
                                    true,
